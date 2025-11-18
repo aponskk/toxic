@@ -1,7 +1,7 @@
 Файл model_weights.pth не входит в репозиторий, скачайте его по ссылке:  
 https://drive.google.com/file/d/1jul3j9ephqUAWJyzQeZWXCZ-gIiVWXps/view?usp=sharing  
 
-Использование модели
+Использование модели  
 Предсказание для одного текста:
 from model.predict import predict_toxicity
 result = predict_toxicity("Это оскорбительный комментарий")
@@ -46,5 +46,6 @@ python usage_examples.py
 
 Запустите веб-интерфейс:  
 pyrhon app.py  
+
 
 
