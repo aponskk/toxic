@@ -12,7 +12,7 @@ from evaluate import compute_metrics
 os.environ["WANDB_DISABLED"] = "true"
 
 def train_model():
-    data = pd.read_csv('/kaggle/input/russian-language-toxic-comments/labeled.csv') 
+    data = pd.read_csv('labeled.csv') 
     data.columns = ['text', 'label']
     data['label'] = data['label'].astype(int)
     
