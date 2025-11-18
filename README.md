@@ -1,5 +1,6 @@
 Файл model_weights.pth не входит в репозиторий, скачайте его по ссылке:  
 https://drive.google.com/file/d/1jul3j9ephqUAWJyzQeZWXCZ-gIiVWXps/view?usp=sharing  
+или просто запустите файл train.py  
 
 Использование модели  
 Предсказание для одного текста:  
