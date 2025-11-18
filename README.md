@@ -1,5 +1,6 @@
-Файл model_weights.pth не входит в репозиторий, скачайте его по ссылке:
-https://drive.google.com/file/d/1jul3j9ephqUAWJyzQeZWXCZ-gIiVWXps/view?usp=sharing
+Файл model_weights.pth не входит в репозиторий, скачайте его по ссылке:  
+https://drive.google.com/file/d/1jul3j9ephqUAWJyzQeZWXCZ-gIiVWXps/view?usp=sharing  
+
 Использование модели
 Предсказание для одного текста:
 from model.predict import predict_toxicity
@@ -39,9 +40,11 @@ print(results)
 Порог классификации:
 
 Текст классифицируется как "toxic" если score > 0.5
+  
+Проверьте работу модели с помощью:  
+python usage_examples.py  
 
-Проверьте работу модели с помощью:
-python usage_examples.py
+Запустите веб-интерфейс:  
+pyrhon app.py  
 
-Запустите веб-интерфейс:
-pyrhon app.py
+
