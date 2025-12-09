@@ -42,12 +42,6 @@ print(results)
 
 Текст классифицируется как "toxic" если score > 0.5  
 
-Проверьте работу модели с помощью:  
-python usage_examples.py  
-
-Запустите веб-интерфейс:  
-pyrhon app.py  
-
 
 
 
