@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style.css">
+    <title>Проверка токсичности комментариев</title>
+</head>
+<body>
+    <div class="container">
+        <div class="h1">
+            <h2>*GENERATED IN AI</h2>
+            <h1>NOUTOX AI – <br> МЫ ЗА <span class="clean">ЧИСТЫЙ </span> <br> КОНТЕНТ</h1>
+            <a href="#use">ПЕРЕЙТИ К ПРОВЕРКЕ</a>
+        </div>
+
+        <div class="about-us">
+            <h1>РАБОТА МОДЕЛИ</h1>
+            <p>Наш сервис анализирует введенный текст и определяет его характер, классифицируя сообщение как нейтральное или токсичное. Токсичными считаются тексты, содержащие агрессию, оскорбления, грубость или ненормативную лексику.
+
+Каждому результату присваивается оценка уверенности от 0 до 1. Чем выше значение, тем точнее вывод.
+0.9–1.0 означает высокую уверенность, 0.7–0.9 среднюю, 0.5–0.7 низкую, а ниже 0.5 модель практически не уверена в результате.
+
+Если вероятность токсичности превышает 0.5, текст относится к категории токсичных. Сервис может анализировать как одно сообщение, так и сразу несколько текстов одновременно.</p>
+        </div>
+
+        <div class="pole" id="use">
+            <div class="input">
+                <h2>ПРОВЕРКА ТЕКСТА <br> НА ТОКСИЧНОСТЬ <br> И 18+</h2>
+                <textarea id="textInput" placeholder="Введите текст..." spellcheck="false" autocomplete="off" autocorrect="off" autocapitalize="off"></textarea>
+                <br>
+                <button onclick="CheckToxity()" id="checkButton">ПРОВЕРИТЬ</button>
+            </div>
+            <div class="results">
+                <h2>РЕЗУЛЬТАТ</h2>
+                <pre id="result"></pre>
+            </div>
+        </div>
+    </div>
+    <script src="/static/scripts.js"></script>
+</body>
+</html>
