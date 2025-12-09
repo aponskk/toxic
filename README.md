@@ -2,46 +2,8 @@
 https://drive.google.com/file/d/1jul3j9ephqUAWJyzQeZWXCZ-gIiVWXps/view?usp=sharing  
 или просто запустите файл train.py, он автоматически появится в вашем репозитории  
 
-Использование модели  
-Предсказание для одного текста:  
-from model.predict import predict_toxicity  
-result = predict_toxicity("Это оскорбительный комментарий")  
-print(result)  
+Активация окружения  
 
-Возвращает: {"label": "toxic", "score": 0.9567}  
-
-Предсказание для нескольких текстов:  
-results = predict_toxicity(["Нормальный текст", "Токсичный текст"])  
-print(results)  
- 
-Возвращает: [{"label": "neutral", "score": 0.9234}, {"label": "toxic", "score": 0.8812}]  
-
-Формат ответа:  
-  
-Для одного текста: {"label": "neutral" или "toxic", "score": число от 0 до 1}  
-
-Для нескольких текстов: [{"label": "neutral", "score": 0.95}, {"label": "toxic", "score": 0.89}]  
-
-Метки классов:  
-
-"neutral" - нейтральный/нормальный текст  
-
-"toxic" - токсичный текст (оскорбления, агрессия, ненормативная лексика)  
-
-Интерпретация score:  
-
-0.9-1.0 - высокая уверенность  
- 
-0.7-0.9 - средняя уверенность  
-
-0.5-0.7 - низкая уверенность  
-
-< 0.5 - модель не уверена  
-
-Порог классификации:  
-
-Текст классифицируется как "toxic" если score > 0.5  
-
-
-
-
+```bash conda create -n ml_service python=3.11
+conda activate ml_service
+pip install -r requirements.txt ```
