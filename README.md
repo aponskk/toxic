@@ -1,6 +1,3 @@
-Файл model_weights.pth не входит в репозиторий, скачайте его по ссылке:  
-https://drive.google.com/file/d/1jul3j9ephqUAWJyzQeZWXCZ-gIiVWXps/view?usp=sharing  
-или просто запустите файл train.py, он автоматически появится в вашем репозитории  
 
 Активация окружения  
   
@@ -15,6 +12,7 @@ pip install -r requirements.txt
 ```
 uvicorn app:app --reload
 ```
+
 
 
 
