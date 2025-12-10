@@ -13,7 +13,8 @@ pip install -r requirements.txt
 Запустите сервер  
 
 ```
-uvicorn api:app --reload
+uvicorn app:app --reload
 ```
+
 
 
