@@ -5,7 +5,7 @@ https://drive.google.com/file/d/1jul3j9ephqUAWJyzQeZWXCZ-gIiVWXps/view?usp=shari
 Активация окружения  
   
 ```
-conda create -n ml_service python=3.14
+conda create -n ml_service python=3.14.1
 conda activate ml_service
 pip install -r requirements.txt
 ```
@@ -15,4 +15,5 @@ pip install -r requirements.txt
 ```
 uvicorn api:app --reload
 ```
+
 
