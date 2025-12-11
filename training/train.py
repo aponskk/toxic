@@ -1,35 +1,36 @@
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from datasets import Dataset
-from transformers import AutoModelForSequenceClassification, Trainer, TrainingArguments
-import evaluate
-import numpy as np
-import torch
+from transformers import AutoModelForSequenceClassification, AutoTokenizer, Trainer, TrainingArguments
 import os
 from preprocessing import load_and_preprocess_data
-from evaluate import compute_metrics
+from eval import compute_metrics
+from huggingface_hub import HfApi, create_repo
 
 os.environ["WANDB_DISABLED"] = "true"
 
+REPO_ID = "aponskk/toxicAI"  
+MODEL_DIR = "./toxicity_model"
+
 def train_model():
-    data = pd.read_csv('labeled.csv') 
-    data.columns = ['text', 'label']
-    data['label'] = data['label'].astype(int)
-    
+    data = pd.read_csv("data/labeled.csv")
+    data.columns = ["text", "label"]
+    data["label"] = data["label"].astype(int)
+
     train, test = train_test_split(data, test_size=0.3)
     train = Dataset.from_pandas(train)
     test = Dataset.from_pandas(test)
-    
+
     tokenized_train, tokenized_test = load_and_preprocess_data(train, test)
-    
+
     model = AutoModelForSequenceClassification.from_pretrained(
-        'SkolkovoInstitute/russian_toxicity_classifier',
-        num_labels=2
+        "SkolkovoInstitute/russian_toxicity_classifier", num_labels=2
     )
-    
+    tokenizer = AutoTokenizer.from_pretrained("SkolkovoInstitute/russian_toxicity_classifier")
+
     training_args = TrainingArguments(
-        output_dir='test_trainer_log',
-        eval_strategy='epoch',
+        output_dir="test_trainer_log",
+        eval_strategy="epoch",
         per_device_train_batch_size=8,
         per_device_eval_batch_size=8,
         num_train_epochs=3,
@@ -37,19 +38,27 @@ def train_model():
         logging_steps=10,
         save_steps=500,
     )
-    
+
     trainer = Trainer(
         model=model,
         args=training_args,
         train_dataset=tokenized_train,
         eval_dataset=tokenized_test,
-        compute_metrics=compute_metrics
+        compute_metrics=compute_metrics,
     )
-    
+
     trainer.train()
-    
-    model = model.to('cpu')
-    torch.save(model.state_dict(), 'model_weights.pth')
+
+    model.save_pretrained(MODEL_DIR)
+    tokenizer.save_pretrained(MODEL_DIR)
+
+    create_repo(REPO_ID, exist_ok=True)
+    api = HfApi()
+    api.upload_folder(
+        folder_path=MODEL_DIR,
+        repo_id=REPO_ID,
+        commit_message="Update model"
+    )
 
 if __name__ == "__main__":
     train_model()
