@@ -15,7 +15,7 @@ Python 3.14.1
 Conda (для управления окружением)  
 Активация окружения  
 ```
-conda create -n ml_service python=3.14.1
+conda create -n ml_service python=3.12.9
 conda activate ml_service
 pip install -r requirements.txt
 ```
@@ -23,7 +23,7 @@ pip install -r requirements.txt
 Запустите сервер  
 
 ```
-uvicorn app:app --reload
+uvicorn app:app --reload --port 8000
 ```
 
 После запуска сервера перейдите в браузере по адресу: http://localhost:8000  
@@ -41,6 +41,7 @@ uvicorn app:app --reload
 Поддержка GPU для ускорения обработки (при наличии совместимого оборудования)  
 Простой и интуитивный веб-интерфейс  
 REST API для интеграции с другими приложениями  
+
 
 
 
