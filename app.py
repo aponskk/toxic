@@ -31,6 +31,7 @@ frontend_dir = os.path.join(os.path.dirname(__file__), "frontend")
 app.mount("/static", StaticFiles(directory=frontend_dir), name="static")
 
 if __name__ == "__main__":
-    import uvicorn
     import os
-    uvicorn.run(app, host="0.0.0.0", port=int(os.getenv("PORT", 8000)))
+    port = int(os.getenv("PORT", 8000))
+    import uvicorn
+    uvicorn.run(app, host="0.0.0.0", port=port)
