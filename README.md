@@ -19,6 +19,10 @@ conda create -n ml_service python=3.12.9
 conda activate ml_service
 pip install -r requirements.txt
 ```
+Если у вас uv  
+```
+uv pip install -r requirements.txt
+```
 
 Запустите сервер  
 
@@ -49,6 +53,7 @@ REST API для интеграции с другими приложениями
 <img width="1920" height="910" alt="image" src="https://github.com/user-attachments/assets/ff6e5e3d-cb71-4e7d-aa5a-3093650f899d" />  
 <h2>Мобильная версия</h2>  
 <img src="https://github.com/user-attachments/assets/001b2ba9-0de7-40ef-bf8e-eb3888e0770c" alt="image" width="1920" height="911"/>
+
 
 
 
