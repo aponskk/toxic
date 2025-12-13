@@ -1,6 +1,6 @@
-const textInput = document.getElementById('textInput')
-const checkButton = document.getElementById('checkButton')
-const resultDiv = document.getElementById('result')
+const textInput = document.getElementById('textInput');
+const checkButton = document.getElementById('checkButton');
+const resultDiv = document.getElementById('result');
 
 checkButton.addEventListener("click", async () => {
     const text = textInput.value.trim();
@@ -12,7 +12,7 @@ checkButton.addEventListener("click", async () => {
     resultDiv.innerText = "Загрузка...";
 
     try {
-        const response = await fetch("http://127.0.0.1:8000/predict", {
+        const response = await fetch("/predict", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ text })
@@ -32,6 +32,16 @@ checkButton.addEventListener("click", async () => {
         }
 
         resultDiv.innerHTML = message;
+
+        // Прокрутка к результатам на мобильных устройствах
+        if (window.innerWidth <= 768) {
+            const resultsSection = document.querySelector('.results');
+            if (resultsSection) {
+                setTimeout(() => {
+                    resultsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }, 100);
+            }
+        }
 
     } catch (err) {
         resultDiv.innerText = "Ошибка: " + err.message;
