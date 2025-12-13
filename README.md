@@ -2,7 +2,7 @@
 NouTox AI - веб-приложение для анализа текста на предмет токсичности. Сервис использует дообученную языковую модель на основе архитектуры RuBERT, способную с высокой точностью определять токсичные высказывания в русскоязычных сообщениях.  
 
 <h2>О модели</h2>  
-Модель была дообучена на датасете русскоязычных токсичных комментариев. Исходная предобученная модель: [SkolkovoInstitute/russian_toxicity_classifier](https://huggingface.co/SkolkovoInstitute/russian_toxicity_classifier). Финальная версия модели доступна в публичном репозитории Hugging Face Hub: [aponskk/NouTox-AI](https://huggingface.co/aponskk/toxicAI).  
+<p>Модель была дообучена на датасете русскоязычных токсичных комментариев. Исходная предобученная модель: [SkolkovoInstitute/russian_toxicity_classifier](https://huggingface.co/SkolkovoInstitute/russian_toxicity_classifier). Финальная версия модели доступна в публичном репозитории Hugging Face Hub: [aponskk/NouTox-AI](https://huggingface.co/aponskk/toxicAI).</p>  
 
 При первом запуске приложения модель автоматически загружается из Hugging Face Hub и кэшируется локально. Для работы не требуется предварительная загрузка весов или дополнительных файлов. <b>Это может занимать некоторое количесво времени!</b>  
 
@@ -54,6 +54,7 @@ REST API для интеграции с другими приложениями
 <img width="1920" height="910" alt="image" src="https://github.com/user-attachments/assets/ff6e5e3d-cb71-4e7d-aa5a-3093650f899d" />  
 <h2>Мобильная версия</h2>  
 <img src="https://github.com/user-attachments/assets/001b2ba9-0de7-40ef-bf8e-eb3888e0770c" alt="image" width="1920" height="911"/>
+
 
 
 
