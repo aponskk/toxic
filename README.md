@@ -42,15 +42,15 @@ uvicorn app:app --reload --port 8000
 Простой и интуитивный веб-интерфейс  
 REST API для интеграции с другими приложениями  
 
-Часть интерфейса  
-Компьютерная версия  
+<h1>Часть интерфейса</h1>  
+<h2>Компьютерная версия</h2>  
 <img width="1920" height="911" alt="image" src="https://github.com/user-attachments/assets/53e31f83-bc66-461b-b8c5-377ed9b63aa8" />  
 <img width="1920" height="914" alt="image" src="https://github.com/user-attachments/assets/5e08f2c6-a2ce-4739-b28a-c8d282beaece" />  
 <img width="1920" height="910" alt="image" src="https://github.com/user-attachments/assets/ff6e5e3d-cb71-4e7d-aa5a-3093650f899d" />  
-Мобильная версия  
-<img src="https://github.com/user-attachments/assets/c130ee74-f9e6-4b32-8065-a0753d689688" alt="Mobile view 1" width="400" />  
-<img src="https://github.com/user-attachments/assets/69a85206-5f34-41ad-b2cf-70b1075deb5e" alt="Mobile view 2" width="400" />  
-<img src="https://github.com/user-attachments/assets/40b1e4d4-2513-43fd-b76f-8d4501d0013a" alt="Mobile view 3" width="400" />
+<h2>Мобильная версия</h2>  
+![image](https://github.com/user-attachments/assets/001b2ba9-0de7-40ef-bf8e-eb3888e0770c)
+
+
 
 
 
