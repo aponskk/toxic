@@ -1,11 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
+html {
+    overflow-x: hidden;
+    width: 100%;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+html::-webkit-scrollbar {
+    display: none;
+}
+
 body {
     margin: 0;
     overflow-x: hidden;
     margin-top: -25px;
+    padding-top: env(safe-area-inset-top);
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+    max-width: 100vw;
+    scrollbar-width: none;
+    -ms-overflow-style: none; 
 }
 
+body::-webkit-scrollbar {
+    display: none; 
+}
 
 .h1 h1 {
     font-family: 'Roboto', sans-serif;
@@ -15,27 +35,30 @@ body {
     padding: 50px;
 }
 
-
 .h1 {
     width: 100%; 
     min-height: 900px;
-    background-image: url("1.png");
+    background-image: url("https://i.postimg.cc/kg3FGggG/1.png");
     background-size: cover;    
     background-repeat: no-repeat;  
     background-position: center;
     display: flex;
-    padding-left: 13%;
+    padding-left: 5%;
+    padding-top: env(safe-area-inset-top);
     flex-direction: column;
     justify-content: flex-end; 
     align-items: flex-start;  
+    box-sizing: border-box;
+    max-width: 100vw;
+    overflow-x: hidden;
 }
 
 .h1 a {
     display: inline-block;
-    padding: 50px;
+    padding: 50px 70px;
     color: white;
     text-decoration: none;
-    background-color: rgb(30, 30, 30);
+    background-color: rgb(80, 80, 80);
     border-radius: 16px;
     font-weight: 600;
     font-size: 18px;
@@ -43,11 +66,23 @@ body {
     margin-bottom: 15%;
     margin-left: 3.5%;
     transition: all 0.3s ease;
+    outline: none;
+    border: 2px solid transparent;
 }
 
 .h1 a:hover {
     transform: scale(1.05);
-    background-color: rgb(58, 58, 58);
+    background-color: rgb(120, 120, 120);
+}
+
+.h1 a:focus {
+    outline: none;
+    border: 2px solid rgb(200, 200, 200);
+    background-color: rgb(100, 100, 100);
+}
+
+.h1 a:active {
+    background-color: rgb(140, 140, 140);
 }
 
 .h1 h2 {
@@ -63,6 +98,8 @@ body {
     flex-direction: column;
     align-items: center;
     width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
 }
 
 .pole {
@@ -74,9 +111,11 @@ body {
     min-height: 700px;
     margin-top: -25px;
     padding-top: 50px;
-    padding-left: 10%;
+    padding-left: 5%;
     padding-right: 10%;
     box-sizing: border-box;
+    max-width: 100vw;
+    overflow-x: hidden;
 }
 
 .input textarea {
@@ -96,15 +135,17 @@ body {
 }
 
 .input, .results {
-    width: 50%;;
+    width: 50%;
 }
 
 .results {
-    padding-left: 15%;
+    padding-left: 5%;
 }
 
 .results h2 {
     padding-bottom: 110px;
+    text-align: center;
+    padding-left: 0;
 }
 
 .results pre {
@@ -120,30 +161,53 @@ body {
     font-size: clamp(22px, 1vw, 24px);
 }
 
-
 .pole h2 {
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
     font-size: clamp(48px, 0.5vw, 64px);
     color: aliceblue;
+    padding-left: 0;
 }
 
-.pole .input button{
+.pole .input h2 {
+    padding-left: 50px;
+}
+
+.pole .input textarea {
+    margin-left: 50px;
+    width: calc(100% - 50px);
+}
+
+.pole .input button {
     display: inline-block;
-    padding: 30px;
+    padding: 40px 60px;
     color: white;
-    background-color: rgb(30, 30, 30);
+    background-color: rgb(80, 80, 80);
     border-radius: 16px;
     font-weight: 600;
     font-size: 18px;
     font-family: 'Roboto', sans-serif;
     transition: all 0.3s ease;
     margin-bottom: 80px;
+    margin-left: 50px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    outline: none;
 }
 
 .pole .input button:hover {
     transform: scale(1.05);
-    background-color: rgb(58, 58, 58);
+    background-color: rgb(120, 120, 120);
+}
+
+.pole .input button:focus {
+    outline: none;
+    border: 2px solid rgb(200, 200, 200);
+    background-color: rgb(100, 100, 100);
+}
+
+.pole .input button:active {
+    background-color: rgb(140, 140, 140);
 }
 
 .clean {
@@ -157,37 +221,65 @@ body {
 
 .about-us {
     width: 100%; 
-    background-image: url("1001.png");
-    height: 900px;
+    background-image: url("https://i.postimg.cc/fRc79QV6/1001.png");
+    min-height: 900px;
+    height: auto;
     margin-top: -25px;
-    background-size: contain;    
+    background-size: 100% auto;    
     background-repeat: no-repeat;  
-    background-position: center;
+    background-position: left center;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-
+    padding-right: 10%;
+    padding-left: 55%;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    box-sizing: border-box;
+    justify-content: center;
+    max-width: 100vw;
+    overflow-x: hidden;
+    overflow-y: visible;
 }
 
 .about-us h1 {
-    padding-top: 60px;
-    padding-right: 13%;
+    padding-top: 120px;
+    padding-right: 0;
+    padding-left: 0;
+    padding-bottom: 20px;
     font-family: 'Roboto', sans-serif;
     font-weight: 800;
     font-size: clamp(48px, 0.5vw, 64px);
+    color: #000;
+    display: block;
+    text-align: center;
+    width: 100%;
 }
 
 .about-us p {
-    padding-left: 55%;
-    padding-right: 5%;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 20px;
+    padding-bottom: 60px;
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
-    font-size: clamp(28px, 1.5vw, 32px);
+    font-size: clamp(24px, 1.3vw, 30px);
+    text-align: left;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: visible;
+    overflow-y: visible;
 }
 
 .results pre {
     overflow-y: auto;
-    overflow-x: hidden; 
+    overflow-x: hidden;
+    scrollbar-width: none; 
+    -ms-overflow-style: none; 
+}
+
+.results pre::-webkit-scrollbar {
+    display: none; 
 }
 
 .pole, .input, .results, .input textarea, .results pre {
@@ -199,33 +291,246 @@ body {
 }
 
 @media (max-width: 768px) {
+    * {
+        max-width: 100vw;
+    }
+
     .pole {
         flex-direction: column;  
         gap: 20px;
         padding-left: 5%;
         padding-right: 5%;
+        min-height: 800px;
+        width: 100%;
+        max-width: 100%;
     }
 
     .input, .results {
-        width: 100%;  
-        height: 250px; 
+        width: 100% !important;  
+        height: auto; 
+        max-width: 100%;
+    }
+
+    .input textarea, .results pre {
+        height: 250px;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .h1 {
+        min-height: 700px;
+        padding-left: 5%;
+        padding-right: 5%;
+        background-image: url("https://i.postimg.cc/KYW63Tks/mobile_1.jpg") !important;
+        background-size: 100% auto;
+        background-repeat: no-repeat;
+        background-position: center top;
+        background-color: #000;
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+    }
+
+    .h1 h2 {
+        padding-left: 0 !important;
+        margin-left: 0;
     }
 
     .h1 h1 {
-        font-size: clamp(36px, 6vw, 48px); 
-        padding: 20px;
+        padding-left: 0 !important;
+        margin-left: 0;
     }
 
     .h1 a {
-        margin-left: 5%;
-        margin-bottom: 10%;
-        padding: 20px;
-        font-size: 16px;
+        margin-bottom: 18% !important;
+        margin-left: 0 !important;
+        padding: 25px 30px !important;
+        width: auto !important;
+        max-width: 85% !important;
+        font-size: 14px !important;
+    }
+
+    .h1 h1 {
+        font-size: clamp(40px, 6vw, 56px); 
+        padding: 30px 0 !important;
+        line-height: 1.2;
+    }
+
+    .h1 h2 {
+        padding-left: 0 !important;
+        padding-top: 20px;
+        padding-bottom: 30px;
+        margin-left: 0;
+    }
+
+    .about-us {
+        height: auto !important;
+        min-height: auto !important;
+        padding-right: 5% !important;
+        padding-left: 5% !important;
+        padding-top: 20px !important;
+        padding-bottom: 40px !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        background-color: #fff !important;
+        background-image: url("https://i.postimg.cc/28x7KfwV/mobile-1001.jpg") !important;
+        background-size: 100% auto !important;
+        background-repeat: no-repeat !important;
+        background-position: center top !important;
+        position: relative;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-top: -25px;
+        overflow: hidden;
+    }
+
+    .about-us::before {
+        display: none;
+    }
+
+    .about-us h1 {
+        font-size: clamp(32px, 5vw, 42px) !important;
+        padding-top: 0 !important;
+        padding-bottom: 10px !important;
+        text-align: center !important;
+        width: 100% !important;
+        padding-right: 0 !important;
+        padding-left: 0 !important;
+        margin-top: 400px !important;
+        position: relative;
+        z-index: 1;
+        color: #000 !important;
     }
 
     .about-us p {
-        padding-left: 5%;
-        padding-right: 5%;
-        font-size: clamp(18px, 4vw, 24px);
+        padding-left: 4% !important;
+        padding-right: 4% !important;
+        padding-top: 50px !important;
+        padding-bottom: 30px !important;
+        font-size: clamp(16px, 3vw, 20px) !important;
+        text-align: left !important;
+        width: 100% !important;
+        margin-top: 0 !important;
+        max-width: 92% !important;
+        position: relative;
+        z-index: 1;
+        line-height: 1.5 !important;
+        color: #000 !important;
+    }
+
+    .pole h2 {
+        text-align: center !important;
+        line-height: 1.3;
+        padding-left: 0;
+    }
+
+    .pole .input h2 {
+        padding-left: 0;
+        text-align: center !important;
+    }
+
+    .pole .input textarea {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .pole .input button {
+        padding: 30px 50px;
+        margin-bottom: 40px;
+        margin-left: 0;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .results h2 {
+        padding-bottom: 30px;
+        padding-left: 0;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .h1 {
+        min-height: 650px;
+        background-image: url("https://i.postimg.cc/KYW63Tks/mobile_1.jpg") !important;
+        background-size: 100% auto !important;
+        background-repeat: no-repeat !important;
+        background-position: center top !important;
+        overflow: hidden;
+    }
+
+    .h1 h2 {
+        padding-left: 0 !important;
+        margin-left: 0;
+    }
+
+    .h1 h1 {
+        padding-left: 0 !important;
+        margin-left: 0;
+        padding: 20px 0 !important;
+    }
+
+    .h1 a {
+        margin-bottom: 15% !important;
+        margin-left: 0 !important;
+        padding: 20px 25px !important;
+        width: auto !important;
+        max-width: 85% !important;
+        font-size: 13px !important;
+    }
+
+    .about-us {
+        min-height: auto;
+        padding-top: 20px;
+        padding-bottom: 50px;
+        background-image: url("https://i.postimg.cc/28x7KfwV/mobile-1001.jpg") !important;
+        background-size: 100% auto !important;
+        background-position: center top !important;
+        overflow: hidden;
+    }
+
+    .about-us h1 {
+        margin-top: 320px !important;
+    }
+    
+    .pole {
+        min-height: 700px;
+    }
+    
+    .h1 h1 {
+        font-size: clamp(32px, 8vw, 44px);
+        padding: 20px;
+    }
+    
+    .h1 a {
+        padding: 25px 40px;
+        margin-bottom: 8%;
+    }
+    
+    .about-us h1 {
+        font-size: clamp(28px, 6vw, 36px);
+        margin-top: 360px !important;
+        padding-bottom: 10px !important;
+    }
+    
+    .about-us p {
+        font-size: clamp(16px, 4vw, 20px);
+        padding-top: 50px !important;
+        padding-bottom: 30px;
+        padding-left: 4%;
+        padding-right: 4%;
+        max-width: 92%;
+    }
+    
+    .pole h2 {
+        font-size: clamp(32px, 5vw, 48px);
+    }
+    
+    .pole .input button {
+        padding: 25px 40px;
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto 40px;
+        display: block;
     }
 }
