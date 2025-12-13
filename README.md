@@ -48,6 +48,7 @@ REST API для интеграции с другими приложениями
 <img width="1920" height="914" alt="image" src="https://github.com/user-attachments/assets/5e08f2c6-a2ce-4739-b28a-c8d282beaece" />  
 <img width="1920" height="910" alt="image" src="https://github.com/user-attachments/assets/ff6e5e3d-cb71-4e7d-aa5a-3093650f899d" />  
 <h2>Мобильная версия</h2>  
-<img src="https://github.com/user-attachments/assets/001b2ba9-0de7-40ef-bf8e-eb3888e0770c" alt="image" width="600" />
+<img src="https://github.com/user-attachments/assets/001b2ba9-0de7-40ef-bf8e-eb3888e0770c" alt="image" width="1920" height="911"/>
+
 
 
